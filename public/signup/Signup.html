@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shortly</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/common/formStyle.css" />
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/signup/Signup.js" type="module" defer></script>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+    </nav>
+    <main>
+      <p class="heading">Sign up and start shortening</p>
+      <p class="redirect">
+        Already have an account? <a href="/login">Log in</a>
+      </p>
+      <form>
+        <div class="input-block">
+          <label class="required"> Full Name </label>
+          <input
+            type="text"
+            id="name"
+            name="fullName"
+            minlength="5"
+            maxlength="30"
+            required
+          />
+          <div class="input-error hide"></div>
+        </div>
+        <div class="input-block">
+          <label for="email" class="required">Email address</label>
+          <input type="text" id="email" name="emailId" />
+          <div class="input-error hide"></div>
+        </div>
+        <div class="input-block">
+          <div class="password-label">
+            <label for="password" class="required">Password</label>
+            <div id="show">
+              <i class="fa-solid fa-eye"></i>
+              <span>Show</span>
+            </div>
+          </div>
+          <input type="password" name="password" id="password-box" />
+          <div class="input-error hide"></div>
+        </div>
+        <div class="input-block">
+          <label> Phone</label>
+          <input type="tel" name="phoneNumber" id="phone" maxlength="10" />
+          <div class="input-error hide"></div>
+        </div>
+        <button>Sign Up</button>
+      </form>
+    </main>
+    <footer>
+      <p>
+        By signing in with an account, you agree to Shortly's
+        <a href="/pages/terms" class="anchor" target="_blank"
+          >Terms of Services</a
+        >,
+        <a href="/pages/privacy" class="anchor" target="_blank"
+          >Privacy Policy</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

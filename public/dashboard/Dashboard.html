@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/dashboard/dashboard.css" />
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/dashboard/dashboard.js" defer type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+      <div class="right-part">
+        <a class="create" href="/create">Create new</a>
+        <div class="redeem-block">
+          <div class="revenue-display">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span id="revenue"></span>
+          </div>
+          <a class="redeem" href="/redeem">Redeem</a>
+        </div>
+        <a class="upgrade" id="upgrade" href="/subscription">Upgrade</a>
+        <a class="profile" href="/profile">
+          <div id="avatar">
+            <img src="" />
+            <span id="first-character" class="hide"></span>
+          </div>
+          <span id="name"></span>
+        </a>
+        <a href="/logout">
+          <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+    <main>
+      <div class="list-block">
+        <div class="search-block">
+          <input id="search-box" type="text" placeholder="Search..." />
+          <button id="search">Search</button>
+        </div>
+        <div id="no-results" class="hide">
+          <a class="create" href="/create">Create your first link</a>
+        </div>
+        <div>
+          <div id="list"></div>
+          <div class="page-navigation hide">
+            <div>
+              <i class="fa-solid fa-arrow-left arrow-disable" id="left"></i>
+              <span id="page-no">1</span>
+              <i class="fa-solid fa-arrow-right arrow-disable" id="right"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="details">
+        <div id="details" class="hide">
+          <div class="title-block">
+            <p id="url-title"></p>
+            <p class="full-time">
+              <i class="fa-regular fa-calendar"></i>
+              <span id="full-time"></span>
+            </p>
+            <p>
+              <i class="fa-solid fa-chart-column"></i>
+              <span id="details-hits"></span> Total engagements
+            </p>
+            <div class="url-status">
+              <p>Url status</p>
+              <div>
+                <p id="active-text">Active</p>
+                <label class="switch">
+                  <input id="active-input" type="checkbox" />
+                  <span class="slider round"></span>
+                </label>
+                <div class="upgrade-active">
+                  <i class="fa-solid fa-lock"></i>
+                  <p>Upgrade to Activate URL</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="content-block">
+            <div>
+              <a id="details-url" target="_blank" href="">shorturl</a>
+              <button id="copy">
+                <i class="fa-solid fa-copy"></i>
+                copy
+              </button>
+            </div>
+            <p><span id="details-clicks">4</span> clicks</p>
+            <p>
+              <a href="" target="_blank" id="details-full-url">full url</a>
+            </p>
+            <div id="upgrade-qrcode">
+              <p>To unlock qrcode get premium</p>
+              <a class="upgrade" href="/subscription">upgrade</a>
+            </div>
+            <div id="qrcode" class="hide">
+              <div class="qrcode">
+                <img src="" alt="" />
+                <div>
+                  <button id="download">
+                    <i class="fa-sharp fa-solid fa-download"></i>
+                    download png
+                  </button>
+                  <p><span id="details-scan">3</span> scans</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="confirmation hide">
+      <div>
+        <div>
+          <p>Are you sure to Deactivate the url</p>
+          <img src="../images/disconnect_wire.jpg" alt="" />
+          <div class="confirmation-buttons">
+            <button id="no">No</button>
+            <button id="yes">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

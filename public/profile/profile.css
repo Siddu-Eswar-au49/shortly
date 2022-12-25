@@ -1,0 +1,138 @@
+main {
+  padding: 1rem 5rem;
+}
+
+.field {
+  font-size: small;
+  padding-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
+  color: rgba(0, 0, 0, 0.6);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.display-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.display-content p {
+  margin: 0.5rem 0;
+  font-size: x-large;
+  text-transform: capitalize;
+}
+
+.display-content button {
+  height: fit-content;
+  padding: 0.2rem 0.4rem;
+  text-transform: capitalize;
+}
+
+.edit-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.edit-content div {
+  display: flex;
+}
+
+.error-text {
+  color: red;
+  margin: 0;
+  margin-top: 0.3rem;
+}
+
+.edit-content input {
+  flex: 1;
+  font-size: large;
+  padding: 0.3rem 0.6rem;
+}
+
+.edit-content button {
+  text-transform: capitalize;
+  border: none;
+  border-radius: 5px;
+}
+
+.cancel {
+  background-color: lightcoral;
+}
+
+.update {
+  background-color: lightgreen;
+}
+
+main > div {
+  width: 40vw;
+}
+
+a {
+  text-transform: capitalize;
+  text-decoration: none;
+  color: black;
+}
+
+.profile-image-block {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.image-name-block {
+  position: relative;
+}
+
+.image-name-block span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 4rem;
+  transform: translate(-50%, -50%);
+}
+
+.profile-image-block button {
+  padding: 0 0.6rem;
+}
+
+.profile-image-block,
+.profile-image-block img {
+  --size: 150px;
+  height: var(--size);
+  width: var(--size);
+  border-radius: 50%;
+}
+
+label[for="profile-picture"] {
+  --content: "";
+  position: relative;
+  background-color: lightgray;
+  border-radius: 5px;
+  padding: 0.8rem 1.3rem;
+  white-space: nowrap;
+}
+
+label[for="profile-picture"]:hover {
+  cursor: pointer;
+}
+
+label[for="profile-picture"]::after {
+  content: var(--content);
+  position: absolute;
+  bottom: -0.3rem;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  color: red;
+  font-size: small;
+}
+
+.main {
+  display: flex;
+  width: 100%;
+  gap: 10rem;
+}
+
+#profile-info-data {
+  width: 35%;
+}

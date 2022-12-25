@@ -1,0 +1,29 @@
+form {
+  width: 40vw;
+}
+
+.url-block {
+  display: flex;
+  width: 40vw;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+.url-block span {
+  font-size: x-large;
+  transform: translateY(1rem);
+}
+
+.url-part {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.domain-name {
+  width: 90%;
+}
+
+.url-block .input-block {
+  flex: 1;
+}

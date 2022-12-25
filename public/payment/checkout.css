@@ -1,0 +1,65 @@
+.two-column {
+  display: flex;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.left {
+  margin-right: 1rem;
+}
+.right {
+  margin-left: 1rem;
+}
+
+#withdraw {
+  height: 50%;
+}
+
+.redeem-block p {
+  font-size: small;
+}
+
+.main {
+  display: flex;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.blance-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.blance-info p {
+  text-align: center;
+  text-transform: capitalize;
+  padding: 0.2rem 0;
+}
+
+.blance-info div {
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.blance-info div p:first-child {
+  padding: 0.2rem 0.5rem 0;
+  background-color: #99b5d2;
+}
+
+#redeem-Warning {
+  margin-top: 1.5rem;
+  color: red;
+}
+
+#min-redeem {
+  font-size: large;
+  font-weight: 700;
+}
+
+.disabled,
+.disabled:hover {
+  background-color: rgba(1, 100, 150, 0.3);
+  cursor: default;
+}

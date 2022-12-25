@@ -1,0 +1,26 @@
+.two-column {
+  display: flex;
+  align-items: flex-end;
+}
+
+.two-column input {
+  width: 90%;
+}
+
+.left {
+  margin-right: 1rem;
+}
+.right {
+  margin-left: 1rem;
+}
+.heading {
+  font-size: x-large;
+  text-align: center;
+}
+.amount {
+  font-size: xx-large;
+}
+.amount::after {
+  content: ".99";
+  font-size: medium;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/common//formStyle.css" />
+    <link rel="stylesheet" href="/payment/upgrade.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/payment/upgrade.js" defer type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+      <div class="right-part">
+        <a class="profile" href="/profile">
+          <div id="avatar">
+            <img src="" class="hide" />
+            <span id="first-character"></span>
+          </div>
+          <span id="name"></span>
+        </a>
+        <a href="/logout">
+          <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+    <a class="back" href="/dashboard">
+      <i class="fa-solid fa-caret-left"></i>
+      Back</a
+    >
+    <main>
+      <form>
+        <h3 class="heading">
+          Great. Thats
+          <i class="fa-solid fa-indian-rupee-sign"></i>
+          <span class="amount">499</span>
+        </h3>
+        <div class="input-block">
+          <label for="cardNumber">Card Number</label>
+          <input
+            type="text"
+            name="cardNumber"
+            id="card-number"
+            inputmode="numeric"
+            placeholder="XXXX-XXXX-XXXX-XXXX"
+            maxlength="19"
+            minlength="19"
+            required
+          />
+        </div>
+        <div class="input-block">
+          <label for="name-card">Name On the Card</label>
+          <input
+            type="text"
+            name="name-card"
+            id="name-card"
+            maxlength="15"
+            minlength="1"
+            required
+          />
+        </div>
+        <div class="two-column">
+          <div class="input-block left">
+            <label for="expiry-date">Expiry Date</label>
+            <input
+              type="text"
+              name="expiry-date"
+              id="expiry-date"
+              maxlength="5"
+              minlength="5"
+              placeholder="MM/YY"
+              required
+            />
+          </div>
+          <div class="input-block right">
+            <label for="cvv">CVV</label>
+            <input
+              type="password"
+              name="cvv"
+              id="cvv"
+              maxlength="3"
+              minlength="3"
+              required
+            />
+          </div>
+        </div>
+        <button>
+          <i class="fa-solid fa-lock"></i>
+          Finish and Pay
+        </button>
+      </form>
+      <div class="hide" id="after-purchase">
+        <p>
+          Thankyou for taking premium, Redirecting in
+          <span id="seconds">1</span>seconds
+        </p>
+      </div>
+    </main>
+    <footer>
+      <p>
+        Note: For This demo Project, real payment Gateway was not integrated
+      </p>
+    </footer>
+  </body>
+</html>

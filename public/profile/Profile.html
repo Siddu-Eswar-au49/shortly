@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/profile/profile.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/profile/profile.js" defer type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+      <div class="right-part">
+        <a id="upgrade" href="/subscription">upgrade</a>
+        <a class="profile" href="/profile">
+          <div id="avatar">
+            <img src="" class="hide" />
+            <span id="first-character"></span>
+          </div>
+          <span id="name"></span>
+        </a>
+        <a href="/logout">
+          <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+
+    <main>
+      <a href="/dashboard">
+        <i class="fa-solid fa-caret-left"></i>
+        Back</a
+      >
+      <div class="main">
+        <div>
+          <h2>Profile Info</h2>
+          <div class="profile-image-block">
+            <div class="image-name-block">
+              <img
+                src="https://www.pngmagic.com/product_images/plain-soid-Rebecca-Purple-bhackground-images.jpg"
+                id="profile-image"
+              />
+              <span class="" id="big-first-character">S</span>
+            </div>
+            <div class="change-image">
+              <label for="profile-picture">Change Image</label>
+              <div class="hide"></div>
+            </div>
+          </div>
+
+          <p class="expiry-time-text hide">
+            Your subscription expires on
+            <span id="expiry-date">12 Dec 2022</span>
+          </p>
+
+          <form class="hide">
+            <input type="file" name="profilePicture" id="profile-picture" />
+          </form>
+        </div>
+        <div id="profile-info-data"></div>
+      </div>
+    </main>
+  </body>
+</html>

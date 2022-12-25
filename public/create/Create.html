@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/common/formStyle.css" />
+    <link rel="stylesheet" href="/create/create.css" />
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/create/create.js" defer type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+      <div class="right-part">
+        <div class="redeem-block">
+          <div class="revenue-display">
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span id="revenue"></span>
+          </div>
+          <a class="redeem" href="/redeem">redeem</a>
+        </div>
+        <a id="upgrade" href="/subscription">upgrade</a>
+        <a class="profile" href="/profile">
+          <div id="avatar">
+            <img src="" class="hide" />
+            <span id="first-character"></span>
+          </div>
+          <span id="name"></span>
+        </a>
+        <a href="/logout">
+          <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+    <a class="back" href="/dashboard">
+      <i class="fa-solid fa-caret-left"></i>
+      Back</a
+    >
+    <main>
+      <p class="heading">Create A short Url</p>
+      <form>
+        <div class="input-block">
+          <label class="required" for="fullUrl"> Destination </label>
+          <input type="text" id="fullUrl" name="fullUrl" required />
+          <div class="input-error hide"></div>
+        </div>
+        <div class="url-block">
+          <div class="input-block">
+            <label> Domain </label>
+            <input
+              type="text"
+              class="domain-name"
+              value="shortly.com"
+              disabled
+            />
+          </div>
+          <span>/</span>
+          <div class="input-block">
+            <label class="required" for="backHalf"> Custom back-half </label>
+            <input
+              type="text"
+              id="backHalf"
+              name="backHalf"
+              required
+              class="back-half"
+              maxlength="30"
+            />
+            <div class="input-error hide"></div>
+          </div>
+        </div>
+        <div class="input-block">
+          <label for="title"> Title </label>
+          <input type="text" maxlength="30" name="title" id="title" />
+          <div class="input-error hide"></div>
+        </div>
+        <!-- <input type="checkbox" name="random" /> -->
+        <button>create</button>
+      </form>
+    </main>
+  </body>
+</html>

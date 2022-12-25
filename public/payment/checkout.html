@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/common/formStyle.css" />
+    <link rel="stylesheet" href="/payment/checkout.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/payment/checkout.js" defer type="module"></script>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+      <div class="right-part">
+        <a class="upgrade" id="upgrade" href="/subscription">upgrade</a>
+        <a class="profile" href="/profile">
+          <div id="avatar">
+            <img src="" class="hide" />
+            <span id="first-character"></span>
+          </div>
+          <span id="name"></span>
+        </a>
+        <a href="/logout">
+          <i class="fa-solid fa-right-from-bracket fa-2x"></i>
+        </a>
+      </div>
+    </nav>
+    <a class="back" href="/dashboard">
+      <i class="fa-solid fa-caret-left"></i>
+      Back</a
+    >
+    <main>
+      <div class="blance-info">
+        <div>
+          <p>current Balance</p>
+          <p>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span id="current-amount"></span>
+          </p>
+        </div>
+        <div>
+          <p>total revenue</p>
+          <p>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span id="total-amount"></span>
+          </p>
+        </div>
+        <div>
+          <p>previously redeemed amount</p>
+          <p>
+            <i class="fa-solid fa-indian-rupee-sign"></i>
+            <span id="redeemed-amount"></span>
+          </p>
+        </div>
+      </div>
+      <p id="redeem-Warning" class="hide">
+        Your Balance should be greater than
+        <i class="fa-solid fa-indian-rupee-sign"></i>
+        <span id="min-redeem">100</span> to withdraw
+      </p>
+      <form>
+        <div class="input-block">
+          <label for="paypal-email" class="required"
+            >Pay Pal Email Address</label
+          >
+          <input
+            type="email"
+            name="paypalEmailId"
+            id="paypal-email"
+            required
+            disabled
+          />
+        </div>
+        <div class="two-column">
+          <button id="edit">Edit</button>
+          <button id="update" disabled>Update</button>
+        </div>
+        <div class="two-column">
+          <div class="input-block">
+            <label for="amount" class="required">Amount</label>
+            <input
+              type="text"
+              value="500"
+              id="amount"
+              name="amount"
+              required
+              disabled
+            />
+            <div class="input-error hide"></div>
+          </div>
+          <button id="redeem-button" disabled>Redeem</button>
+        </div>
+      </form>
+    </main>
+  </body>
+</html>

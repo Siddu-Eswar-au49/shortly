@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shortly</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/common/common.css" />
+    <link rel="stylesheet" href="/common/formStyle.css" />
+    <link rel="stylesheet" href="/login/login.css" />
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/login/login.js" type="module" defer></script>
+  </head>
+  <body>
+    <nav>
+      <p>Shortly</p>
+    </nav>
+    <main>
+      <p class="heading">Login and start sharing</p>
+      <p class="redirect">
+        don't have an account? <a href="/signup">Sign Up</a>
+      </p>
+      <form>
+        <p class="form-title">Log in Here</p>
+        <div class="input-block">
+          <label for="email">Email address</label>
+          <input type="text" id="email" name="emailId" required />
+          <div class="input-error hide"></div>
+        </div>
+        <div class="input-block">
+          <div class="password-label">
+            <label for="password">Password</label>
+            <div id="show">
+              <i class="fa-solid fa-eye"></i>
+              <span>Show</span>
+            </div>
+          </div>
+          <input type="password" name="password" id="password-box" required />
+          <div class="input-error hide"></div>
+        </div>
+        <button id="login">Login</button>
+      </form>
+    </main>
+    <footer>
+      <p>
+        By signing in with an account, you agree to Shortly's
+        <a class="anchor" href="/pages/terms" target="_blank"
+          >Terms of Services</a
+        >,
+        <a class="anchor" href="/pages/privacy" target="_blank"
+          >Privacy Policy</a
+        >.
+      </p>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shorty</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/home/home.css" />
+    <script
+      src="https://kit.fontawesome.com/7a04efc21b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/home/home.js"></script>
+  </head>
+  <body>
+    <nav>
+      <a class="logo" href="#">Shortly</a>
+      <div>
+        <a class="navigation" href="#pricing">Pricing</a>
+        <a class="navigation" href="/login">Login</a>
+        <a class="navigation signup" href="/signup">Sign Up</a>
+      </div>
+    </nav>
+    <div class="intro">
+      <p>The shorter,</p>
+      <div class="browser-bar">
+        <div class="control-buttons">
+          <div class="close"></div>
+          <div class="minimize"></div>
+          <div class="maximize"></div>
+        </div>
+        <div class="redo-undo">
+          <i class="fa-solid fa-chevron-left"></i>
+          <i class="fa-solid fa-chevron-right"></i>
+        </div>
+        <div class="favorites">
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="url-block">
+          <div class="security">
+            <i class="fa-solid fa-lock"></i>
+          </div>
+          <p>
+            https://<span id="website-domain">shortly.com</span>/shots/
+            <span><i class="fa-solid fa-scissors"></i></span
+            ><span class="trailing-part"
+              >search?q=shorturlsxsrf=ALiCzsYypIJq7IVonUdFdRNBk5wfMA......</span
+            >
+          </p>
+        </div>
+      </div>
+      <p>the better</p>
+      <a class="get-started signup" href="/signup">Get started</a>
+    </div>
+    <div class="pricing-section" id="pricing">
+      <div class="pricing">
+        <h3 class="pricing-plans">Pricing Plans</h3>
+        <div class="description">
+          <p class="description1">Try out free plan,</p>
+          <p class="description2">upgrade to premium</p>
+        </div>
+
+        <table>
+          <thead>
+            <tr>
+              <th class="product-heading">Products</th>
+              <th class="free">
+                <span>free</span>
+                <p><i class="fa-solid fa-indian-rupee-sign"></i> 0</p>
+              </th>
+              <th class="premium">
+                <div>
+                  <span>premium</span>
+                  <p><i class="fa-solid fa-indian-rupee-sign"></i> 499.99</p>
+                </div>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="createUrl">
+              <td class="product">createUrl</td>
+              <td><i class="fa-solid fa-check"></i></td>
+              <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr class="customBackHalf">
+              <td class="product">customBackHalf</td>
+              <td><i class="fa-solid fa-check"></i></td>
+              <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr class="qrCode">
+              <td class="product">qrCode</td>
+              <td></td>
+              <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr class="trackHits">
+              <td class="product">trackHits</td>
+              <td><i class="fa-solid fa-check"></i></td>
+              <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr class="closeUrl">
+              <td class="product">closeUrl</td>
+              <td><i class="fa-solid fa-check"></i></td>
+              <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr class="openUrl">
+              <td class="product">openUrl</td>
+              <td></td>
+              <td><i class="fa-solid fa-check"></i></td>
+            </tr>
+            <tr class="rewardPoints">
+              <td class="product">rewardPoints</td>
+              <td>
+                <i class="fa-solid fa-indian-rupee-sign"></i> 1 for 1000 hits
+              </td>
+              <td>
+                <i class="fa-solid fa-indian-rupee-sign"></i> 1 for 500 hits
+              </td>
+            </tr>
+            <tr class="redeemThreshold">
+              <td class="product">Minimum Redeem</td>
+              <td><i class="fa-solid fa-indian-rupee-sign"></i> 1000</td>
+              <td><i class="fa-solid fa-indian-rupee-sign"></i> 500</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="after-pricing">
+      <p>create a short url</p>
+      <a href="/signup" class="get-started2 signup">Get Started</a>
+    </div>
+    <footer>
+      <div>
+        <img src="../images/favicon.png" />
+        <p>Shortly</p>
+      </div>
+      <div>
+        <i class="fa-brands fa-twitter fa-2x"></i>
+        <i class="fa-brands fa-instagram fa-2x"></i>
+        <i class="fa-brands fa-facebook fa-2x"></i>
+      </div>
+    </footer>
+    <script>
+      document.querySelector("#website-domain").innerText = location.host;
+    </script>
+  </body>
+</html>

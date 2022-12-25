@@ -1,0 +1,263 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+* {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #ecf0f3;
+}
+
+nav {
+  z-index: 2;
+  padding: 0 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+}
+
+nav div:last-child {
+  display: flex;
+  gap: 0rem;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.navigation {
+  margin: 0.3rem 0;
+  line-height: 2.4rem;
+  padding: 0 0.7rem;
+}
+
+.navigation:hover {
+  opacity: 60%;
+}
+
+.signup {
+  background-color: rgba(1, 100, 150, 0.7);
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.2rem 1rem;
+}
+
+.signup:hover {
+  background-color: rgba(1, 100, 150, 1);
+}
+
+.get-started {
+  width: max-content;
+  padding: 1rem;
+}
+.get-started2 {
+  padding: 1rem;
+}
+
+.logo {
+  text-decoration: none;
+  color: black;
+  font-size: xx-large;
+  margin: auto 0px;
+}
+
+.pricing-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  margin: 0 0 1.5rem;
+}
+
+.description .description1 {
+  font-size: xx-large;
+}
+
+.description .description2 {
+  font-size: large;
+}
+
+.pricing {
+  width: 60vw;
+}
+
+.pricing .pricing-plans {
+  padding: 1rem 0px;
+  font-size: x-large;
+}
+
+table {
+  padding: 0px 2rem;
+  text-align: center;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+}
+
+thead {
+  font-size: x-large;
+  text-transform: capitalize;
+}
+
+th {
+  padding: 0.5rem 0;
+}
+
+th p {
+  font-size: large;
+}
+
+.product-heading,
+.product {
+  background-color: #e6ebf0;
+}
+
+.free {
+  background-color: #e2e8ed;
+}
+
+.premium {
+  background-color: #acafb6;
+}
+
+tr {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.product {
+  padding: 1rem;
+  text-transform: capitalize;
+  font-weight: 700;
+  text-align: left;
+}
+
+.after-pricing {
+  background-color: #acafb6;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.after-pricing p {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  padding: 2rem 0;
+}
+
+footer {
+  display: flex;
+  padding: 1rem 2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer p {
+  font-size: xx-large;
+}
+
+footer div {
+  display: flex;
+  gap: 1rem;
+}
+
+footer img {
+  height: 3rem;
+}
+
+.intro {
+  position: relative;
+  height: 95vh;
+  background-color: #ecf0f3;
+  z-index: 3;
+  padding-left: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.intro > p {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #456077;
+}
+
+.browser-bar {
+  background-color: #e2e8ed;
+  border-radius: 1.5rem;
+  width: 85%;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  gap: 2rem;
+}
+
+.control-buttons {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.control-buttons div {
+  --size: 1.3rem;
+  border-radius: 50%;
+  height: var(--size);
+  width: var(--size);
+}
+
+.close {
+  background-color: #f16059;
+}
+.minimize {
+  background-color: #fac03c;
+}
+.maximize {
+  background-color: #58cb40;
+}
+
+.redo-undo {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.redo-undo i {
+  background-color: #f1f1f1;
+  padding: 0.4rem;
+  border-radius: 5px;
+}
+
+.url-block {
+  background-color: white;
+  padding: 0.5rem;
+  display: flex;
+  margin: 0.5rem 0;
+  gap: 0.5rem;
+  border-radius: 0.8rem;
+}
+
+.url-block p {
+  color: #7e7e7e;
+}
+
+.fa-scissors {
+  font-size: larger;
+  color: #636363;
+}
+
+.fa-check {
+  color: #39b820;
+}
+
+.trailing-part {
+  color: #cacaca;
+}
