@@ -1,4 +1,4 @@
-import { showErrorMsg, hideErrorMsg } from "../common/common.js";
+import { showErrorMsg, hideErrorMsg, hide, unHide } from "../common/common.js";
 const formEle = document.querySelector("form");
 
 const fullNameEle = document.querySelector("#name");
@@ -8,6 +8,8 @@ const passwordEle = document.querySelector("#password-box");
 const passwordErrorEle = document.querySelector("#password-box+.input-error");
 const phoneELe = document.querySelector("#phone");
 const phoneErrorEle = document.querySelector("#phone+.input-error");
+const loaderEle = document.querySelector("#loader");
+const signupText = document.querySelector("#signup-text");
 
 const lowerCase = "qwertyuiopasdfghjklzxcvbnm";
 const upperCase = "QWERTYUIOPASDFGHJKLZXCVBNM";
@@ -59,9 +61,20 @@ function validateForm() {
   return true;
 }
 
+function hideSignupText() {
+  hide(signupText);
+  loaderEle.style.setProperty("display", "flex");
+}
+
+function displaySignupText() {
+  unHide(signupText);
+  loaderEle.style.setProperty("display", "none");
+}
+
 formEle.addEventListener("submit", async (e) => {
   e.preventDefault();
   if (!validateForm()) return;
+  hideSignupText();
   const response = await fetch("/signup", {
     method: "post",
     body: new URLSearchParams(new FormData(formEle)),
@@ -70,6 +83,7 @@ formEle.addEventListener("submit", async (e) => {
   if (response.status == 200) {
     location.replace(data.redirect);
   } else {
+    displaySignupText();
     showErrorMsg(emailErrorEle, data.errorMsg);
   }
 });

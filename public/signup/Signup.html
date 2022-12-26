@@ -13,6 +13,13 @@
       crossorigin="anonymous"
     ></script>
     <script src="/signup/Signup.js" type="module" defer></script>
+    <style>
+      #loader {
+        display: none;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
   </head>
   <body>
     <nav>
@@ -57,7 +64,12 @@
           <input type="tel" name="phoneNumber" id="phone" maxlength="10" />
           <div class="input-error hide"></div>
         </div>
-        <button>Sign Up</button>
+        <button>
+          <span id="signup-text" class=""> Sign Up </span>
+          <div id="loader">
+            <div class="loader"></div>
+          </div>
+        </button>
       </form>
     </main>
     <footer>
