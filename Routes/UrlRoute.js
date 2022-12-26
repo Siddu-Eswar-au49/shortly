@@ -33,7 +33,6 @@ urlRouter.post("/", async (req, res) => {
 });
 
 urlRouter.get("/", async (req, res) => {
-  //TODO: advanced pagination
   let { page, size, search } = req.query;
   page = Number(page || 1);
   size = Number(size || 10);
@@ -90,6 +89,7 @@ urlRouter.get("/", async (req, res) => {
 
   const nextUrl = await urlModel
     .findOne({ emailId: req.emailId })
+    .lean()
     .skip(page * size);
   res.json({ urls, next: nextUrl ? true : false, prev: page != 1 });
 });

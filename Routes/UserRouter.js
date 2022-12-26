@@ -7,19 +7,21 @@ const { UploadPhoto, upload } = require("../Constants");
 // route api/profile
 userRouter.get("/", async (req, res) => {
   const emailId = req.emailId;
-  const user = await userModel.findOne(
-    { emailId },
-    {
-      _id: false,
-      password: false,
-      subscription: false,
-      redeemedAmount: false,
-      totalRevenue: false,
-      currentRevenue: false,
-      urlsCount: false,
-      __v: false,
-    }
-  );
+  const user = await userModel
+    .findOne(
+      { emailId },
+      {
+        _id: false,
+        password: false,
+        subscription: false,
+        redeemedAmount: false,
+        totalRevenue: false,
+        currentRevenue: false,
+        urlsCount: false,
+        __v: false,
+      }
+    )
+    .lean();
   if (user) {
     res.json(user);
   } else {
@@ -35,7 +37,6 @@ userRouter.put(
     const emailId = req.emailId;
     const user = await userModel.findOne({ emailId });
     if (req.file) {
-      console.log("prifle pic", Object.keys(req.file));
       try {
         user.profilePicture = await UploadPhoto(req.file);
         user.save();
@@ -61,19 +62,21 @@ userRouter.put(
 
 userRouter.get("/info", async (req, res) => {
   const emailId = req.emailId;
-  const user = await userModel.findOne(
-    { emailId },
-    {
-      _id: false,
-      password: false,
-      emailId: false,
-      phoneNumber: false,
-      redeemedAmount: false,
-      totalRevenue: false,
-      urlsCount: false,
-      __v: false,
-    }
-  );
+  const user = await userModel
+    .findOne(
+      { emailId },
+      {
+        _id: false,
+        password: false,
+        emailId: false,
+        phoneNumber: false,
+        redeemedAmount: false,
+        totalRevenue: false,
+        urlsCount: false,
+        __v: false,
+      }
+    )
+    .lean();
   if (user) {
     res.json(user);
   } else {
